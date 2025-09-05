@@ -1,6 +1,6 @@
 ﻿namespace DataSumAI_sub_project_
 {
-    partial class Form1
+    partial class MainUI
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,79 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            button1 = new Button();
             textBox2 = new TextBox();
-            button2 = new Button();
-            richTextBox2 = new RichTextBox();
+            bntQuestion = new Button();
             webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            label1 = new Label();
+            richTextBox1 = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(12, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(199, 23);
-            textBox1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 41);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // textBox2
             // 
-            textBox2.Location = new Point(538, 12);
+            textBox2.Location = new Point(426, 6);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(226, 23);
             textBox2.TabIndex = 3;
             // 
-            // button2
+            // bntQuestion
             // 
-            button2.Location = new Point(538, 41);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 4;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.Location = new Point(538, 85);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(535, 470);
-            richTextBox2.TabIndex = 5;
-            richTextBox2.Text = "";
+            bntQuestion.Location = new Point(345, 6);
+            bntQuestion.Name = "bntQuestion";
+            bntQuestion.Size = new Size(75, 23);
+            bntQuestion.TabIndex = 4;
+            bntQuestion.Text = "Question";
+            bntQuestion.UseVisualStyleBackColor = true;
+            bntQuestion.Click += button2_Click;
             // 
             // webView21
             // 
             webView21.AllowExternalDrop = true;
             webView21.CreationProperties = null;
             webView21.DefaultBackgroundColor = Color.White;
-            webView21.Location = new Point(12, 85);
+            webView21.Location = new Point(12, 41);
             webView21.Name = "webView21";
-            webView21.Size = new Size(520, 470);
+            webView21.Size = new Size(563, 601);
             webView21.TabIndex = 6;
             webView21.ZoomFactor = 1D;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(326, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Go to the Website that has the information for your question";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(581, 41);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(522, 601);
+            richTextBox1.TabIndex = 8;
+            richTextBox1.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1091, 589);
+            ClientSize = new Size(1115, 654);
+            Controls.Add(richTextBox1);
+            Controls.Add(label1);
             Controls.Add(webView21);
-            Controls.Add(richTextBox2);
-            Controls.Add(button2);
+            Controls.Add(bntQuestion);
             Controls.Add(textBox2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
@@ -109,12 +99,10 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private Button button1;
         private TextBox textBox2;
-        private Button button2;
-        private RichTextBox richTextBox2;
+        private Button bntQuestion;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private Label label1;
+        private RichTextBox richTextBox1;
     }
 }

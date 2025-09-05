@@ -5,11 +5,11 @@ using System.Text.Json.Serialization;
 
 namespace DataSumAI_sub_project_
 {
-    public partial class Form1 : Form
+    public partial class MainUI : Form
     {
         Root root = new Root();
 
-        public Form1()
+        public MainUI()
         {
             InitializeComponent();
             webView21.Source = new Uri("https://www.google.com/");
@@ -33,14 +33,14 @@ namespace DataSumAI_sub_project_
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            if (webView21.CoreWebView2 == null)
+            if (webView21.CoreWebView2 == null) //error handling
             {
                 await webView21.EnsureCoreWebView2Async(null);
             }
             string question = textBox2.Text;
 
             string article = await webView21.ExecuteScriptAsync("document.body.innerText");
-            article = System.Text.Json.JsonSerializer.Deserialize<string>(article);
+            article = System.Text.Json.JsonSerializer.Deserialize<string>(article); 
 
             string summary = await GetSummaryAsync(article, question);
             richTextBox1.Text = summary;

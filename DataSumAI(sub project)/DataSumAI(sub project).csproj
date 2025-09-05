@@ -10,8 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetBrowser" Version="3.3.1" />
-    <PackageReference Include="DotNetBrowser.WinForms" Version="3.3.1" />
+    <PackageReference Include="DotNetBrowser" Version="3.3.2" />
+    <PackageReference Include="DotNetBrowser.WinForms" Version="3.3.2" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3405.78" />
   </ItemGroup>
 
